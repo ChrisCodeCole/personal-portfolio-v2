@@ -1,0 +1,104 @@
+.landingWrapper {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: linear-gradient(rgba(0, 0, 15, 0.85), rgba(0, 0, 15, 0.85)),
+		url('../../../assets/intro-bg-computer.jpeg') no-repeat center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.bottomContainer {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	bottom: 0;
+}
+
+.nameHeader {
+	color: var(--main-textColor);
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+.headerSeparator {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	border: 1.5px solid white;
+	width: 10%;
+}
+
+.subHeader {
+	color: var(--main-textColor);
+	font-size: 1.5rem;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.scrollText {
+	color: var(--main-textColor);
+	margin-bottom: 2.5%;
+}
+
+.bubblesWrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 5%;
+}
+
+.bubbles {
+	display: inline-block;
+	height: 2vw;
+	width: 2vw;
+	border-radius: 50%;
+	background-color: var(--main-textColor);
+	box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+	margin-right: 3%;
+	cursor: pointer;
+}
+
+.bubbles:first-child {
+	background-color: rgb(100, 100, 255);
+}
+
+.bubbles:last-child {
+	margin-right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.nameHeader {
+		font-size: 2rem;
+	}
+
+	.subHeader {
+		font-size: 1rem;
+	}
+
+	.headerSeparator {
+		margin-top: 7.5%;
+		margin-bottom: 7.5%;
+	}
+
+	.scrollText {
+		margin-bottom: 7.5%;
+	}
+
+	.bubblesWrapper {
+		margin-bottom: 10%;
+	}
+
+	.bubbles {
+		height: 5vw;
+		width: 5vw;
+		margin-right: 5%;
+	}
+}

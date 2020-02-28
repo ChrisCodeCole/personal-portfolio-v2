@@ -1,7 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Landing from './components/pages/Landing/Landing';
 
 function App() {
-	return <div className='App'></div>;
+	return (
+		<Router>
+			<div className='App'>
+				<Switch>
+					<Route exact path='/'>
+						<Landing />
+					</Route>
+					<Route path='/projects'></Route>
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
