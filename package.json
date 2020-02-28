@@ -1,36 +1,75 @@
 {
-  "name": "personal-portfolio-v2",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.2.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-redux": "^7.2.0",
-    "react-scripts": "3.4.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "personal-portfolio-v2",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@reduxjs/toolkit": "^1.2.5",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.4.1",
+		"@testing-library/user-event": "^7.2.1",
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0",
+		"react-redux": "^7.2.0",
+		"react-scripts": "3.4.0"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"lint": "eslint ./src/",
+		"format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+	},
+	"eslintConfig": {
+		"plugins": [
+			"react",
+			"prettier"
+		],
+		"extends": [
+			"react-app",
+			"plugin:prettier/recommended"
+		]
+	},
+	"prettier": {
+		"printWidth": 80,
+		"bracketSpacing": true,
+		"trailingComma": "es5",
+		"semi": true,
+		"jsxSingleQuote": true,
+		"singleQuote": true,
+		"useTabs": true,
+		"tabWidth": 4
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.+(js|jsx)": [
+			"eslint --fix"
+		],
+		"*.+(json|css|md)": [
+			"prettier --write"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^4.2.3",
+		"lint-staged": "^10.0.8",
+		"prettier": "^1.19.1"
+	}
 }
