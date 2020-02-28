@@ -5,11 +5,16 @@
 	background: linear-gradient(rgba(0, 0, 15, 0.85), rgba(0, 0, 15, 0.85)),
 		url('../../../assets/intro-bg-computer.jpeg') no-repeat center;
 	background-size: cover;
+	position: relative;
+}
+
+.topContainer {
+	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	position: relative;
 }
 
 .bottomContainer {
