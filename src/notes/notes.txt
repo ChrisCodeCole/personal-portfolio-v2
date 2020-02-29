@@ -1,0 +1,31 @@
+======================
+    TODO
+======================
+[Bubbles]
+    *Move bubbles out of Landing component
+    *Make bubbles Links? (Experiment with transition animation & Link animation)
+[Projects Page]
+    *Get idea for project page look & feel
+        -3D Carousel
+    *Add description on the side
+    [(Mobile)]
+    *Mobile version will be 1 project displayed at a time
+        -description above?
+[Abouts Page]
+[Landings Page]
+    *Add photo on one the side (face shot most likely)
+    *Use "glass" light blue overlay & white border-right 
+    *create half-sized navigation on right with same effect (but overlay is only on hover & possibly solid grey background(with transparency??) before overlay)
+    *Use viewport width & probably position absolute to the left/right side for both photo & nav windows
+    [(Mobile)]
+    *Display: none on the photo
+    *Use hamburger navigation menu
+[Page Transition]
+    Use react spring page transition - https://codesandbox.io/embed/1y3yyqpq7q
+
+//grey - #303030
+
+//light blue - 2,10,32,.45
+//(border white(255, 255, 255, 0.5))
+
+//:before.. hover translate(1, 1) translate(-1, -1) opacity transition: all 0.5 ease;
