@@ -69,6 +69,7 @@
 	box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
 	margin-right: 3%;
 	cursor: pointer;
+	/* animation: bouncy 2s infinite; */
 }
 
 .bubbles:first-child {
@@ -78,6 +79,12 @@
 .bubbles:last-child {
 	margin-right: 0;
 }
+
+/* 
+    ================
+    MEDIA QUERIES
+    ================
+*/
 
 @media only screen and (max-width: 600px) {
 	.nameHeader {
@@ -105,5 +112,28 @@
 		height: 5vw;
 		width: 5vw;
 		margin-right: 5%;
+	}
+}
+
+/* 
+    ================
+    KEYFRAMES
+    ================
+*/
+@keyframes bouncy {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-5%);
+	}
+	50% {
+		transform: translateY(10%);
+	}
+	75% {
+		transform: translateY(-10%);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
