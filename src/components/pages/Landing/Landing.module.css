@@ -105,6 +105,7 @@
 	}
 
 	.bubblesWrapper {
+		outline: 1px solid red;
 		margin-bottom: 10%;
 	}
 
@@ -120,7 +121,7 @@
     KEYFRAMES
     ================
 */
-@keyframes bouncy {
+/* @keyframes bouncy {
 	0% {
 		transform: translateY(0);
 	}
@@ -136,4 +137,4 @@
 	100% {
 		transform: translateY(0);
 	}
-}
+} */
