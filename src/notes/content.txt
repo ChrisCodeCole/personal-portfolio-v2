@@ -1,0 +1,25 @@
+home page
+	-include text / quote?
+	-framework icons wrapped in / around card?
+	-include links (github / e-mail / CV link triggers display & download)
+	-maybe move bubles to side? leave for now
+	-need a photo from Cory
+about page
+https://dribbble.com/shots/4332885-Board-Game-Persona/attachments/4332885-Board-Game-Persona?mode=media
+	-technical background
+		-skills & experience
+	-personal background
+	-hobbies
+
+projects(separate pages)
+	-lawrenceville co-op
+	-include one more
+
+
+https://dribbble.com/shots/11276631/attachments/2884962?mode=media
+https://dribbble.com/shots/10724776-Carlos-Personal-Portfolio-Website
+https://samgoddard.co.uk/
+https://dribbble.com/shots/9809111-Developer-Dark-Grid-Portfolio
+https://dribbble.com/shots/11700345-Developer-Portfolio-Website-Concept
+https://dribbble.com/shots/9936700-Folium-Programmer-Portfolio
+https://dribbble.com/shots/11143636-Louise-Foster-Portfolio

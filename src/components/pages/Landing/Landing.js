@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import classes from './Landing.module.css';
+import styles from './Landing.module.css';
 import { easeSinInOut } from 'd3-ease';
 import { animated, useSpring } from 'react-spring';
 import { motion } from 'framer-motion';
+import TopNav from '../../UI/TopNav/TopNav';
 // import { animated, config, useSpring, useTrail } from 'react-spring';
 
 const bubbleNavArray = [0, 1, 2];
@@ -71,27 +72,30 @@ export default function Landing() {
 	});
 
 	return (
-		<div className={classes.landingWrapper}>
+		<div className={styles.landingWrapper}>
+			<TopNav />
 			<animated.div
 				style={topContainerProps}
-				className={classes.topContainer}
+				className={styles.cardWrapper}
 			>
-				<h1 className={classes.nameHeader}>Christian Coleman</h1>
-				<span className={classes.headerSeparator} />
-				<h3 className={classes.subHeader}> Front End Engineer</h3>
+				<div className={styles.headerCard}>
+					<h1 className={styles.nameHeader}>Christian Coleman</h1>
+					<span className={styles.headerSeparator} />
+					<h3 className={styles.subHeader}> Front End Engineer</h3>
+				</div>
 			</animated.div>
 			<animated.div
 				style={bottomContainerProps}
-				className={classes.bottomContainer}
+				className={styles.bottomContainer}
 			>
-				<span className={classes.scrollText}>SCROLL</span>
-				<div className={classes.bubblesFlexWrapper}>
+				<span className={styles.scrollText}>SCROLL</span>
+				<div className={styles.bubblesFlexWrapper}>
 					{bubbleNavArray.map((num, idx) => {
 						return (
-							<div className={classes.bubbleClickContainer}>
+							<div className={styles.bubbleClickContainer}>
 								<motion.span
 									key={num}
-									className={classes.bubble}
+									className={styles.bubble}
 									animate={{ y: '-0.5vw' }}
 									transition={{
 										repeat: Infinity,
@@ -103,49 +107,6 @@ export default function Landing() {
 							</div>
 						);
 					})}
-					{/* <span
-						className={classes.bubbles}
-						style={{
-							...bubbleSpring,
-							transform: bubbleSpring.y
-								.interpolate({
-									range: [0, 0.25, 0.5, 0.75, 1],
-									output: [0, -30, 0, 30, 0],
-								})
-								.interpolate(y => {
-									return `translateY(${y}%)`;
-								}),
-						}}
-					/>
-					<span
-						className={classes.bubbles}
-						style={{
-							...bubbleSpring,
-							transform: bubbleSpring.y
-								.interpolate({
-									range: [0, 0.25, 0.5, 0.75, 1],
-									output: [0, -30, 0, 30, 0],
-								})
-								.interpolate(y => {
-									console.log('interpolating');
-									return `translateY(${y}%)`;
-								}),
-						}}
-					/>
-					<span
-						className={classes.bubbles}
-						style={{
-							...bubbleSpring,
-							transform: bubbleSpring.y
-								.interpolate({
-									range: [0, 0.25, 0.5, 0.75, 1],
-									output: [0, -30, 0, 30, 0],
-								})
-								.interpolate(y => {
-									return `translateY(${y}%)`;
-								}),
-						}}
-					/> */}
 				</div>
 			</animated.div>
 		</div>
