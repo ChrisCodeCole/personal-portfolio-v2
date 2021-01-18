@@ -1,38 +1,40 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import classes from './Landing.module.css';
 import { easeSinInOut } from 'd3-ease';
-import { animated, config, useSpring, useTrail } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
+import { motion } from 'framer-motion';
+// import { animated, config, useSpring, useTrail } from 'react-spring';
 
-const numArray = [0, 1, 2];
-const useBubbleSpring = delay => {
-	return useSpring({
-		config: {
-			...config.gentle,
-			// easing: t => easeSinInOut(t),
-			duration: 3000,
-		},
-		delay: delay,
-		from: {
-			y: 0,
-		},
-		to: async next => {
-			while (1) {
-				await next({ y: 1 });
-			}
-		},
-		reset: true,
-	});
-};
+const bubbleNavArray = [0, 1, 2];
+// const useBubbleSpring = delay => {
+// 	return useSpring({
+// 		config: {
+// 			...config.gentle,
+// 			// easing: t => easeSinInOut(t),
+// 			duration: 3000,
+// 		},
+// 		delay: delay,
+// 		from: {
+// 			y: 0,
+// 		},
+// 		to: async next => {
+// 			while (1) {
+// 				await next({ y: 1 });
+// 			}
+// 		},
+// 		reset: true,
+// 	});
+// };
 
 export default function Landing() {
-	const bubbleSpring1 = useBubbleSpring(200);
-	const bubbleSpring2 = useBubbleSpring(400);
-	const bubbleSpring3 = useBubbleSpring(600);
-	const springs = {
-		bubbleSpring1,
-		bubbleSpring2,
-		bubbleSpring3,
-	};
+	// const bubbleSpring1 = useBubbleSpring(200);
+	// const bubbleSpring2 = useBubbleSpring(400);
+	// const bubbleSpring3 = useBubbleSpring(600);
+	// const springs = {
+	// 	bubbleSpring1,
+	// 	bubbleSpring2,
+	// 	bubbleSpring3,
+	// };
 
 	// useEffect(() => {
 
@@ -76,34 +78,29 @@ export default function Landing() {
 			>
 				<h1 className={classes.nameHeader}>Christian Coleman</h1>
 				<span className={classes.headerSeparator} />
-				<h3 className={classes.subHeader}> Front End Developer</h3>
+				<h3 className={classes.subHeader}> Front End Engineer</h3>
 			</animated.div>
 			<animated.div
 				style={bottomContainerProps}
 				className={classes.bottomContainer}
 			>
 				<span className={classes.scrollText}>SCROLL</span>
-				<div className={classes.bubblesWrapper}>
-					{numArray.map((num, idx) => {
+				<div className={classes.bubblesFlexWrapper}>
+					{bubbleNavArray.map((num, idx) => {
 						return (
-							<animated.span
-								key={num}
-								className={classes.bubbles}
-								style={{
-									...springs[`bubbleSpring${num + 1}`],
-									delay: idx * 1000,
-									transform: springs[
-										`bubbleSpring${num + 1}`
-									].y
-										.interpolate({
-											range: [0, 0.25, 0.5, 0.75, 1],
-											output: [0, -15, 0, 15, 0],
-										})
-										.interpolate(y => {
-											return `translateY(${y}%)`;
-										}),
-								}}
-							/>
+							<div className={classes.bubbleClickContainer}>
+								<motion.span
+									key={num}
+									className={classes.bubble}
+									animate={{ y: '-0.5vw' }}
+									transition={{
+										repeat: Infinity,
+										duration: 2,
+										delay: num * 0.3,
+										repeatType: 'reverse',
+									}}
+								/>
+							</div>
 						);
 					})}
 					{/* <span

@@ -53,31 +53,40 @@
 	margin-bottom: 2.5%;
 }
 
-.bubblesWrapper {
+.bubblesFlexWrapper {
 	display: flex;
 	width: 100%;
 	justify-content: center;
 	margin-bottom: 5%;
 }
 
-.bubbles {
+.bubbleClickContainer {
+	height: 2.5vw;
+	width: 2.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-right: 1%;
+	cursor: pointer;
+}
+
+.bubble {
 	display: inline-block;
 	height: 2vw;
 	width: 2vw;
 	border-radius: 50%;
 	background-color: var(--main-textColor);
 	box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
-	margin-right: 3%;
-	cursor: pointer;
+	/* margin-right: 3%; */
 	/* animation: bouncy 2s infinite; */
 }
 
-.bubbles:first-child {
+.bubble:first-child {
 	background-color: rgb(100, 100, 255);
 }
 
-.bubbles:last-child {
-	margin-right: 0;
+.bubble:last-child {
+	/* margin-right: 0; */
 }
 
 /* 
